@@ -1,0 +1,14 @@
+from flask import Flask, request, jsonify
+from recommender import get_recommendations
+
+app = Flask(__name__)
+
+@app.route("/recommend", methods=["POST"])
+def recommend():
+    data = request.get_json()
+    user_id = data.get("user_id")
+    recs = get_recommendations(user_id)
+    return jsonify(recommendations=recs)
+
+if __name__ == "__main__":
+    app.run(debug=True)

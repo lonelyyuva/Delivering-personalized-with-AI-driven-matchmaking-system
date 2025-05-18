@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Matchmaker</title>
+</head>
+<body>
+    <h1>Get Your Movie Match</h1>
+    <input type="text" id="userId" placeholder="Enter User ID" />
+    <button onclick="getRecommendations()">Recommend</button>
+    <ul id="results"></ul>
+
+    <script src="app.js"></script>
+</body>
+</html>
